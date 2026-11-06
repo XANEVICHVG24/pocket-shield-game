@@ -57,3 +57,14 @@ def show_rules():
             3: f"Правильный ответ: {task['options'][task['correct']]}",
         }
         print(f"\n💡 Подсказка {level}: {hints[level]}")
+
+        def show_results(score: int, correct_count: int, hints_total: int, rank: str):
+            print("\n" + "═" * 46)
+            print("           ИТОГИ ИГРЫ")
+            print("═" * 46)
+            print(f"Правильных ответов: {correct_count}/6")
+            print(f"Использовано подсказок: {hints_total}")
+            print(f"Общий балл: {score}/600")
+            print(f"Звание: {rank}")
+            print("═" * 46)
+            print("\n[1] Играть снова\n[0] Выход")
